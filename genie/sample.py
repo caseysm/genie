@@ -19,7 +19,7 @@ def main(args):
 	# output directory
 	outdir = os.path.join(model.rootdir, model.name, 'version_{}'.format(model.version), 'samples')
 	if not os.path.exists(outdir):
-		os.mkdir(outdir)
+		os.makedirs(outdir)
 	outdir = os.path.join(outdir, 'epoch_{}'.format(model.epoch))
 	if os.path.exists(outdir):
 		print('Samples existed!')
